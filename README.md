@@ -1,2 +1,14 @@
-# Alife.Plugin.SubAgent
-进程内无头子代理插件 (SubAgent) for Alife Framework
+# Alife.Plugin.SubAgent - 内置无头子代理
+
+为 Alife 框架提供进程内无头子代理（Headless Sub-Activity）。
+
+## 核心特性
+- **展现层硬隔离**：完全剥离桌宠与语音组件，后台执行任务 100% 零抢麦、不打扰前台聊天。
+- **多模型自动容灾**：支持配置主模型与多级 Fallback 容灾模型，网络或限流时自动重试切换。
+- **步数与超时熔断**：单任务步数熔断控制，单步脚本超时保护，拒绝死循环空转。
+- **独立工程记忆库**：为工程任务沉淀独立的会话知识记忆，不污染主角色聊天上下文。
+- **QQ 附件直投**：通过 OneBot 协议直投交付物（支持 .docx / .pdf / .xlsx / .zip / .png）。
+
+## 使用方式
+安装后在角色设置中启用本插件，在配置面板中填写你的 OpenAI 兼容 API 地址与 Key。
+AI 角色可直接调用 `<SubAgentDispatch>任务内容</SubAgentDispatch>` 指令派发后台异步任务。
